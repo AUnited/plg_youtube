@@ -63,8 +63,13 @@ class plgContentYoutubePlugin extends JPlugin
 
 		$width = $params->get('width', 425);
 		$height = $params->get('height', 344);
+        $confidence = $params->get('confidence', 0);
+        $fullscreen = $params->get('fullscreen', 1);
+        #Logic
+        if($confidence) $url='www.youtube-nocookie.com'; else $url='www.youtube.com';
+        if($fullscreen) $fscr=' allowfullscreen'; else $fscr='';
 	
-		return '<iframe width="'.$width.'" height="'.$height.'" src="https://www.youtube.com/embed/'.$vCode.'" frameborder="0" allowfullscreen></iframe>';
+		return '<iframe width="'.$width.'" height="'.$height.'" src="https://'.$url.'/embed/'.$vCode.'" frameborder="0"'.$fscr.'></iframe>';
 	}
 
 	function plVideo($vCode)
@@ -74,8 +79,13 @@ class plgContentYoutubePlugin extends JPlugin
 
         $width = $params->get('width', 425);
         $height = $params->get('height', 344);
+        $confidence = $params->get('confidence', 0);
+        $fullscreen = $params->get('fullscreen', 1);
+        #Logic
+        if($confidence) $url='www.youtube-nocookie.com'; else $url='www.youtube.com';
+        if($fullscreen) $fscr=' allowfullscreen'; else $fscr='';
 
-        return '<iframe width="'.$width.'" height="'.$height.'" src="https://www.youtube.com/embed/videoseries?list='.$vCode.'" frameborder="0" allowfullscreen></iframe>';
+        return '<iframe width="'.$width.'" height="'.$height.'" src="https://'.$url.'/embed/videoseries?list='.$vCode.'" frameborder="0" '.$fscr.'></iframe>';
     }
 
 }

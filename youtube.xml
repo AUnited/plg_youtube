@@ -23,6 +23,14 @@
 			<fieldset name="basic">
 				<field name="width" type="text" default="425" label="Width" description="Width of the YouTube video. Default width is 425 pixels." />
 				<field name="height" type="text" default="344" label="Height" description="Height of the YouTube video. Default height is 344 pixels." />
+                <field name="confidence" type="radio" class="btn-group btn-group-yesno" default="0" label="High confidence" description="High confidence mode.">
+                    <option value="0">JNo</option>
+                    <option value="1">JYes</option>
+                </field>
+                <field name="fullscreen" type="radio" class="btn-group btn-group-yesno" default="1" label="Allow fullscreen" description="Allow fullscreen">
+                    <option value="0">JNo</option>
+                    <option value="1">JYes</option>
+                </field>
 			</fieldset>
 		</fields>
 	</config>
