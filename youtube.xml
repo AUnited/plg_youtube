@@ -3,8 +3,8 @@
 <extension version="2.5" type="plugin" group="content">
 	<name>YouTube Plugin</name>
 	<author>Benjamin Golding, Vitaliy Zhukov</author>
-	<creationDate>Dec 2014</creationDate>
-	<copyright>Benjamin Golding 2013. All rights reserved.</copyright>
+	<creationDate>Sep 2016</creationDate>
+	<copyright>Vitaliy Zhukov 2016. All rights reserved.</copyright>
 	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
 	<authorEmail>info@aunited.ru</authorEmail>
 	<authorUrl>http://aunited.ru/youtube</authorUrl>
