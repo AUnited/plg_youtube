@@ -1,4 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
+<!DOCTYPE extension PUBLIC "-//Joomla! 3.0//DTD template 1.0//EN" "http://help.aunited.ru/dtd/joomla/3.0/plugin-install.dtd">
 <extension version="2.5" type="plugin" group="content">
 	<name>YouTube Plugin</name>
 	<author>Benjamin Golding, Vitaliy Zhukov</author>
@@ -7,7 +8,7 @@
 	<license>http://www.gnu.org/licenses/gpl-2.0.html GNU/GPL</license>
 	<authorEmail>info@aunited.ru</authorEmail>
 	<authorUrl>http://aunited.ru/youtube</authorUrl>
-	<version>1.2</version>
+	<version>1.3</version>
 	<description>
 	<![CDATA[
 <p>With this plugin, you can embed YouTube videos into articles simply by copying and pasting a youtube's video parameter between the youtube flags: {youtube}xxxxxx{/youtube}. So for instance if the URL is: www.youtube.com/watch?v=2jvLalY6ubc <br/><br/>Then you would insert the following text to your article:<br/>
