@@ -42,13 +42,15 @@ class plgContentYoutubePlugin extends JPlugin
 		global $mainframe;
 		
 
-		if ( JString::strpos( $article->text, '{youtube}' ) === false ) {
+		if ( JString::strpos( $article->text, '{youtube}' ) === false || JString::strpos( $article->text, '{youpl}' ) === false) {
 		return true;
 		}
-		
+
 		$article->text = preg_replace_callback('|{youtube}(.*){\/youtube}|',function ($match){return $this->embedVideo($match[1]);}, $article->text);
-		
-			
+
+        $article->text = preg_replace_callback('|{youpl}(.*){\/youpl}|',function ($match){return $this->plVideo($match[1]);}, $article->text);
+
+
 
 		return true;
 	
@@ -62,7 +64,18 @@ class plgContentYoutubePlugin extends JPlugin
 		$width = $params->get('width', 425);
 		$height = $params->get('height', 344);
 	
-		return '<object width="'.$width.'" height="'.$height.'"><param name="movie" value="http://www.youtube.com/v/'.$vCode.'"></param><param name="allowFullScreen" value="true"></param><embed src="http://www.youtube.com/v/'.$vCode.'" type="application/x-shockwave-flash" allowfullscreen="true" width="'.$width.'" height="'.$height.'"></embed></object>';
+		return '<iframe width="'.$width.'" height="'.$height.'" src="https://www.youtube.com/embed/'.$vCode.'" frameborder="0" allowfullscreen></iframe>';
 	}
+
+	function plVideo($vCode)
+    {
+
+        $params = $this->params;
+
+        $width = $params->get('width', 425);
+        $height = $params->get('height', 344);
+
+        return '<iframe width="'.$width.'" height="'.$height.'" src="https://www.youtube.com/embed/videoseries?list='.$vCode.'" frameborder="0" allowfullscreen></iframe>';
+    }
 
 }
