@@ -8,7 +8,7 @@ defined( '_JEXEC' ) or die( 'Restricted access' );
 jimport( 'joomla.plugin.plugin' );
 
 #YouTube Content Plugin
-class plgContentYoutubePlugin extends JPlugin
+class plgContentyoutube extends JPlugin
 {
 
 	function PluginYoutube( &$subject, $params )
