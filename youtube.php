@@ -20,12 +20,11 @@ class plgContentyoutube extends JPlugin
 		{
 		global $mainframe;
 
-		if ( JString::strpos( $article->text, '{youtube}' ) === false || JString::strpos( $article->text, '{youpl}' ) === false) {
+		if ( JString::strpos( $article->text, '{youtube}' ) === false ) {
 		return true;
 		}
 
 		$article->text = preg_replace_callback('|{youtube}(.*){\/youtube}|',function ($match){return $this->embedVideo($match[1]);}, $article->text);
-        $article->text = preg_replace_callback('|{youpl}(.*){\/youpl}|',function ($match){return $this->plVideo($match[1]);}, $article->text);
 		return true;
 	}
 
