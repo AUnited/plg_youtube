@@ -32,4 +32,7 @@
 			</fieldset>
 		</fields>
 	</config>
+	<updateservers>
+		<server type="extension" priority="1" name="youtube"><![CDATA[http://help.aunited.ru/youtube/update/youtube-update.xml]]></server>
+	</updateservers>
 </extension>
