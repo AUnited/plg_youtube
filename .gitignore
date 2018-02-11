@@ -14,10 +14,8 @@ $RECYCLE.BIN/
 *.msm
 *.msp
 
-#Joomla installer files
-*.zip
-*.tgz
-*.tar.gz
+# Windows shortcuts
+*.lnk
 
 # =========================
 # Operating System Files
@@ -30,16 +28,16 @@ $RECYCLE.BIN/
 .AppleDouble
 .LSOverride
 
-# Icon must end with two \r
-Icon
-
-
 # Thumbnails
 ._*
 
-# Files that might appear on external disk
+# Files that might appear in the root of a volume
+.DocumentRevisions-V100
+.fseventsd
 .Spotlight-V100
+.TemporaryItems
 .Trashes
+.VolumeIcon.icns
 
 # Directories potentially created on remote AFP share
 .AppleDB
@@ -48,5 +46,10 @@ Network Trash Folder
 Temporary Items
 .apdisk
 
-#Jetbrains
+#Jetbrains Options Directory
 .idea
+
+#Joomla installation package
+*.zip
+*.tar.gz
+*.tgz
